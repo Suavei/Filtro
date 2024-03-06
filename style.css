@@ -1,0 +1,409 @@
+:root {
+    font-size: 16px;
+    font-family: Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+    --text-primary: #753422;
+    --text-secondary: #B05B3B;
+    --bg-primary: #B05B3B;
+    --bg-secondary: #FFEBC9;
+}
+
+/* rem relevent fs to the root fs, ie 5rem*16px = 80px */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background-color: black;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--text-primary);
+}
+
+/* set an overlay above hero section to put a dull effect*/
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+} */
+
+/* am putting header navbar in a singal bundle */
+header {
+    width: 100%;
+    height: 50px;
+    padding: 0px 7vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.hide-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+header:not(.hide-navbar) {
+    transform: translateY(0);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    float: left;
+    color: white;
+    text-decoration: none;
+    font-style: italic;
+    cursor: pointer;
+}
+
+header nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+header li a {
+    font-size: 2vw;
+    padding: 0px 30px;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* hero section  */
+.hero {
+    height: 60vw;
+    background:url(img/hands2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 8vw;
+    color: var(--bg-secondary);
+    padding: 10px;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 3vw;
+    color: var(--bg-secondary);
+    padding-bottom: 10px;
+    z-index: 1;
+}
+
+.hero a {
+    padding-top: 10px;
+}
+
+.hero a button {
+    z-index: 1;
+    font-size: 1.5em;
+    height: 3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.container1{
+    width: 100vw;
+    height: 100vh;
+    background:var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper{
+    width: 70%;
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-slide {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+    color: var(--text-primary);
+}
+.swiper .swiper-pagination-bullet-active{
+    background: var(--text-primary);
+}
+
+/* all buttons on the page */
+button {
+    background: var(--text-primary);
+    color: var(--bg-secondary);
+    border: none;
+    position: relative;
+    height: 4vw;
+    font-size: 1em;
+    padding: 0 1em;
+    margin: 10px;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: var(--text-primary);
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+.section-second {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-secondary);
+}
+
+.main {
+    position: relative;
+    margin: 50px;
+    top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.container h1 {
+    color: var(--bg-secondary);
+    padding: 10px 2px;
+    float: left;
+    font-size: 1.5em;
+}
+
+.container p {
+    position: relative;
+    clear: both;
+    /*clear float*/
+    color: var(--bg-secondary);
+    text-align: left;
+    font-size: 1rem;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+
+.banner-image {
+    background-image: url(img/card1.jpg);
+}
+
+.banner-image2 {
+    background-image: url(img/card2.webp);
+}
+
+.banner-image3 {
+    background-image: url(img/card3.jpg);
+}
+
+.banner-image4 {
+    background-image: url(img/card4.webp);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price .amount {
+    font-size: 1.5rem;
+    color: var(--bg-secondary)
+}
+
+.price button {
+    float: right;
+}
+
+
+.hr-line {
+    position: relative;
+    display: flex;
+    color: var(--text-primary);
+    flex-direction: row;
+    top: 60px;
+    font-size: 28px;
+}
+
+.hr-line:before,
+.hr-line:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 4px solid var(--text-primary);
+    margin: 20px;
+}
+
+.hr-line2 {
+    position: relative;
+    display: flex;
+    color: var(--bg-secondary);
+    flex-direction: row;
+    top: 20px;
+    font-size: 28px;
+}
+
+.hr-line2:before,
+.hr-line2:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 4px solid var(--bg-secondary);
+    margin: 20px;
+}
+.brand-display{
+    width: 100vw;
+    height: 40vw;
+    background-color: var(--bg-secondary);
+}
+
+.brands {
+    width: 80%;
+    position: relative;
+    top: 10vw;
+    left: 10vw;
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    height: 10px;
+}
+
+.brands img {
+    width: 20vw;
+    height: 20vw;
+    margin: 0px 2vw;
+}
+
+
+
+footer {
+    height: fit-content;
+    background-color: var(--text-secondary);
+}
+
+footer p {
+    text-align: center;
+    color: var(--bg-secondary);
+}
+footer .foot-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .foot-container .merchandise ,footer .foot-container .franchise,footer .foot-container .aboutUs{
+    margin: 10px;
+}
+footer .foot-container .followUs{
+    margin-right: 50px;  
+}
+footer .foot-container .followUs ul{
+    display: flex;   
+}
+footer.foot-container ul{
+    margin: 20px 10px;
+}
+footer .foot-container b{
+    color: aliceblue;
+    font-size: larger;
+    margin: 80px 20px;
+}
+
+footer li {
+    list-style: none;
+    color: white;
+    padding: 5px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.followUs ul{
+    padding: 0px;
+}
+.followUs ul li i{
+    font-size: 30px;
+    color: #000;
+}
+
+.foot-container {
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* @media(max-width: 800px;){
+    .logo {
+        font-size: 0.5rem;
+    }
+} */

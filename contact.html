@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        background-color: #fffdd0;
+      }
+
+      header .logo {
+        color: black;
+      }
+
+      nav ul li a {
+        color: black;
+      }
+
+      .contact {
+        position: relative;
+        top: 40px;
+      }
+
+      .contact-container {
+        margin: 50px;
+        padding: 20px;
+      }
+
+      .contact-info p {
+        position: relative;
+        font-size: 1.5em;
+        padding: 10px;
+        color: black;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Filtro</a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore Us</a></li>
+          <li><a href="index.html#brands">Brands</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div class="buttons">
+        <a href=""><button>Sign-up/Log-in</button></a>
+        &nbsp;
+        <a href=""><button>Get the app</button></a>
+      </div>
+    </header>
+
+    <section class="contact">
+      <h1 class="hr-line">&nbsp;&nbsp;Contact Us&nbsp;&nbsp;</h1>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <p>
+            If you have any questions or concerns, feel free to reach out to us.
+          </p>
+          <p>Email: info@filtrocoffee.com</p>
+          <p>Phone: +1 123-456-7890</p>
+        </div>
+
+        <div class="contact-form">
+          <h2>Contact Form</h2>
+          <form action="#" method="post">
+            <div>
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div>
+              <label for="email">Your Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div>
+              <label for="message">Your Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h1 class="hr-line2">&nbsp;&nbsp;Get in Touch with us&nbsp;&nbsp;</h1>
+      <div class="foot-container">
+        <div class="merchandise">
+          <b>Merchandise</b>
+          <ul>
+            <li>T-shirts</li>
+            <li>Caps</li>
+            <li>Masks</li>
+          </ul>
+        </div>
+        <div class="franchise">
+          <b>Franchise</b>
+          <ul>
+            <li>Coffee Outlet</li>
+            <li>Coffee Vending Machine</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="aboutUs">
+          <b>About Us</b>
+          <ul>
+            <li>Promotions</li>
+            <li>Customer Care</li>
+            <li>Legal Information</li>
+            <li>Achievements</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="followUs">
+          <b>Follow Us</b>
+          <ul>
+            <li><i class="fa-brands fa-square-instagram"></i></li>
+            <li><i class="fa-brands fa-square-facebook"></i></li>
+            <li><i class="fa-brands fa-square-x-twitter"></i></li>
+            <li><i class="fa-brands fa-discord"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: 1.5px solid white; margin: 30px" />
+      <p>&copy; <em>Filtro</em>. All rights reserved.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

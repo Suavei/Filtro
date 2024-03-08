@@ -1,0 +1,266 @@
+body {
+    background-color: #fffdd0;
+  }
+
+  header .logo {
+    color: black;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+
+  .explore {
+    height: fit-content;
+    position: relative;
+    top: 40px;
+  }
+  .aboutUs{
+    margin: 70px 20px;
+  }
+
+  .contact-container {
+    margin: 50px;
+    padding: 20px;
+  }
+
+  .contact-info p {
+    position: relative;
+    font-size: 1.5em;
+    padding: 10px;
+    color: black;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+  }
+  .container8{
+    width: 90%;
+    margin:80px;
+    overflow: hidden;
+    color: rgb(255, 0, 0);
+    text-shadow: red 10px;
+}
+.container8 h2{
+    color: #234E70;
+    font-size: 800px;
+}
+.container1{
+    width: 80%;
+    margin:auto;
+    background-color: #fbf8be;
+    color: #234E70;
+
+}
+
+#main-header{
+    background-color: #000000;
+}
+#showcase{
+    color: #234E70;
+    background-position: center right;
+    /* min-height is used for adjusting div/box sizes as we decrease width box sizes increases accordingly */
+    min-height: 300px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#showcase h1{
+    color: #234E70;
+    font-size: 50px;
+    line-height: 1.6em;
+    padding-top: 30px;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    color: #101820;
+}
+#main{
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  margin: auto;
+  color: #000;
+}
+
+#main .par{
+  padding-left: 20px;
+  padding-bottom: 25px;
+  font-family: Arial;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+#main h1{
+  font-family: 'Times New Roman';
+  font-size: 50px;
+  padding-left: 20px;
+  margin-top: 9%;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+
+#main .cn{
+  width: 160px;
+  height: 40px;
+  background: #ff7200;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease;
+  
+}
+
+#main .cn a{
+  text-decoration: none;
+  color: #000;
+  transition: .3s ease;
+}
+
+.cn:hover{
+  background-color: #fff;
+}
+
+#main span{
+  color: #ff7200;
+  font-size: 65px
+}
+
+#sidebar{
+    float: right;
+    width: 320px;
+    height: 480px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    color: #fee715;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#sidebar h3{
+  width: 220px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #ff7200;
+  font-size: 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 8px;
+}
+
+#sidebar input{
+  width: 240px;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid #ff7200;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+
+#sidebar input:focus{
+  outline: none;
+}
+
+::placeholder{
+  color: #fff;
+  font-family: Arial;
+}
+.btnn{
+  width: 240px;
+  height: 40px;
+  background: #ff7200;
+  border: none;
+  margin-top: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.4s ease;
+}
+.btnn:hover{
+  background: #fff;
+  color: #ff7200;
+}
+.btnn a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+#sidebar .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: center;
+}
+#sidebar .link a{
+  text-decoration: none;
+  color: #ff7200;
+}
+.liw{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.icons a{
+  text-decoration: none;
+  color: #fff;
+}
+.icons ion-icon{
+  color: #fff;
+  font-size: 30px;
+  padding-left: 14px;
+  padding-top: 5px;
+  transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+  color: #ff7200;
+}
+
+#main-footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+footer .filtrotext{
+    align-items: center;
+}
+.followUs ul{
+    height: 50px;
+}
+
+/* if width>600px then sidebar shift downward */
+@media(max-width:600px){
+    #main{
+        width:100%;
+        float: none;   
+     }
+     #sidebar{
+        width:300px;
+        padding: 20px;
+        float: none;
+        align-self: center;   
+     }
+}

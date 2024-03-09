@@ -105,29 +105,28 @@ header li a {
 }
 
 .hero h1 {
-    font-size: 8vw;
+    font-size: 5vw;
     color: var(--bg-secondary);
     padding: 10px;
     z-index: 1;
 }
 
 .hero p {
-    font-size: 3vw;
+    font-size: 2vw;
     color: var(--bg-secondary);
     padding-bottom: 10px;
     z-index: 1;
 }
 
 .hero a {
-    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
 .hero a button {
     z-index: 1;
-    font-size: 1.5em;
-    height: 3rem;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 2vw;
+    height: 3vw;
+    padding: 5px 25px 15px 20px;
 }
 .container1{
     width: 100vw;
@@ -361,7 +360,7 @@ footer p {
 footer .foot-container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 footer .foot-container .merchandise ,footer .foot-container .franchise,footer .foot-container .aboutUs{
     margin: 10px;
@@ -370,7 +369,8 @@ footer .foot-container .followUs{
     margin-right: 50px;  
 }
 footer .foot-container .followUs ul{
-    display: flex;   
+    display: flex;
+    flex-wrap: wrap;   
 }
 footer.foot-container ul{
     margin: 20px 10px;
@@ -384,7 +384,7 @@ footer .foot-container b{
 footer li {
     list-style: none;
     color: white;
-    padding: 5px 20px;
+    padding: 5px 1vw;
     font-size: 16px;
     font-family: sans-serif;
 }
@@ -393,7 +393,7 @@ footer li {
 }
 .followUs ul li i{
     font-size: 30px;
-    color: #fff;
+    color: var(--bg-secondary);
 }
 
 .foot-container {

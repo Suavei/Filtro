@@ -360,7 +360,7 @@ footer p {
 footer .foot-container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 footer .foot-container .merchandise ,footer .foot-container .franchise,footer .foot-container .aboutUs{
     margin: 10px;

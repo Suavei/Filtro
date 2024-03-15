@@ -22,6 +22,7 @@ function change(){
     else{
         btn.innerHTML = '';
     }
+    
 
     const swiper = new Swiper('.swiper', {
         autoplay: {

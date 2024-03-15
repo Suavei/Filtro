@@ -10,13 +10,17 @@
       body {
         background-color: #fffdd0;
       }
-
-      header .logo {
-        color: black;
+      header{
+        background-color: #000;
+        color: #fff;
       }
+      header .logo {
+        color: #fff;
+      }
+      
 
       nav ul li a {
-        color: black;
+        color: #fff;
       }
 
       .contact {
@@ -37,12 +41,23 @@
       }
 
       .contact-form {
+        position: relative;
+        
+        width: 400px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         align-content: center;
         padding: 20px;
+        border: 2px #fff;
+      }
+      .contact-form .display{
+        display: flex;
+        flex-direction: column
+      }
+      .contact-form .input{
+        display: flex;
+        flex-direction: column
       }
     </style>
   </head>
@@ -79,8 +94,8 @@
         </div>
 
         <div class="contact-form">
-          <h2>Contact Form</h2>
-          <form action="#" method="post">
+          <!-- <h2>Contact Form</h2> -->
+          <!-- <form action="#" method="post">
             <div>
               <label for="name">Your Name:</label>
               <input type="text" id="name" name="name" required />
@@ -99,10 +114,26 @@
                 rows="4"
                 required
               ></textarea>
+            </div> -->
+            <div class="display">
+              <label for="name">Your Name:</label>
+              <label for="email">Your Email:</label>
+              <label for="message">Your Message:</label>
+
+            </div>
+            <div class="input">
+              <input type="text" id="name" name="name" required />
+              <input type="email" id="email" name="email" required />
+              <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              ></textarea>
             </div>
 
-            <button type="submit">Submit</button>
           </form>
+          <button type="submit">Submit</button>
         </div>
       </div>
     </section>

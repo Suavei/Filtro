@@ -1,42 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <header id="main-header">
-        <nav class="navbar">
-            <div class="title">Minimalm0xic</div>
-            <ul class="menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-    </header>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      let lastScroll = 0;
 
-    <section id="showcase">
-        <div class="container1">
-            <h1>Embrace Simplicity with a Dash of Determination: Where Minimalism Meets Moxie.</h1>
-        </div>
+      window.addEventListener("scroll", () => {
+        const currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const navbar = document.querySelector("header");
+
+        // background opacity based on scroll position
+        const opacity = Math.min(0.8, currentScroll / 200);
+        navbar.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+
+        if (currentScroll > lastScroll) {
+          navbar.classList.add("hide-navbar"); // scroll down, hide nav
+        } else {
+          navbar.classList.remove("hide-navbar"); // scroll up, show nav
+        }
+
+        lastScroll = currentScroll;
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Filtro</a>
+
+      <nav id="navb">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore Us</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div id="buttons">
+        <a href=""><button>Sign-up/Log-in</button></a>
+        &nbsp;
+        <a href=""><button><i class="fa-brands fa-apple"></i>Get the app</button></a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="overlay"></div>
+      <h1>Power up with coffee</h1>
+      <p>Start your exciting day with a cup of Brew coffee</p>
+
+      <a href="explore.html"><button>Explore Us</button></a>
     </section>
 
-    <div class="container">
-       <section id="main">
-          <h1>Welcome!</h1>
-           <p>It explores the intersection of minimalism and a bold, spirited approach to various aspects of life. It cover topics related to simplifying and decluttering, both physically and metaphorically, while embracing a lively and determined attitude.</p>
-       </section>
-       <aside id="sidebar">
-          <p>A blend of simplicity and energy, which encourage readers to approach life with a minimalistic mindset while maintaining a dynamic and spirited outlook.</p>
-       </aside>
-    </div>
-    <footer id="main-footer">
-        <p>Copyright &copy;2023 My Website</p>
+    <section class="section-second" id="section-second">
+      <h1 class="hr-line">&nbsp;&nbsp;Explore the Coffee World&nbsp;&nbsp;</h1>
+      <div class="main">
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-image banner"></div>
+            <h1>Cappacino</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              recusandae?
+            </p>
+            <div class="price">
+              <div class="amount">$8.60</div>
+              <button>Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-image2 banner"></div>
+            <h1>Latte</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              recusandae?
+            </p>
+            <div class="price">
+              <div class="amount">$11.40</div>
+              <button>Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-image3 banner"></div>
+            <h1>Mocha</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              recusandae?
+            </p>
+            <div class="price">
+              <div class="amount">$9.20</div>
+              <button>Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="wrapper">
+            <div class="banner-image4 banner"></div>
+            <h1>Cold Java</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed,
+              recusandae?
+            </p>
+            <div class="price">
+              <div class="amount">$6.40</div>
+              <button>Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="brand-display">
+        <h1 id="brands" class="hr-line">
+          &nbsp;&nbsp;Brands we work with&nbsp;&nbsp;
+        </h1>
+        <div class="brands">
+            <a href="https://www.starbucks.in/"><img src="img/brand1.png" alt="image" /></a>
+            <a href="https://www.nescafe.com/in/"><img src="img/brand2.png" alt="image" /></a>
+            <a href="https://www.timhortons.com/"><img src="img/brand3.png" alt="image" /></a>
+            <a href="https://dunkinindia.com/"><img src="img/brand4.png" alt="image" /></a>
+         </div>
+    </section>
+
+    <footer>
+      <h1 class="hr-line2">&nbsp;&nbsp;Get in Touch with us&nbsp;&nbsp;</h1>
+      <div class="foot-container">
+        <div class="merchandise">
+          <b>Merchandise</b>
+          <ul>
+            <li>T-shirts</li>
+            <li>Caps</li>
+            <li>Masks</li>
+          </ul>
+        </div>
+        <div class="franchise">
+          <b>Franchise</b>
+          <ul>
+            <li>Coffee Outlet</li>
+            <li>Coffee Vending Machine</li>
+            <li>Contact Us</li>
+          </ul>
+        </div>
+        <div class="aboutUs">
+          <b>About Us</b>
+          <ul>
+            <li>Promotions</li>
+            <li>Customer Care</li>
+            <li>Legal Information</li>
+            <li>Achievements</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="followUs">
+          <b>Follow Us</b>
+          <ul>
+            <li><i class="fa-brands fa-square-instagram"></i></li>
+            <li><i class="fa-brands fa-square-facebook"></i></li>
+            <li><i class="fa-brands fa-square-x-twitter"></i></li>
+            <li><i class="fa-brands fa-discord"></i></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border: 1.5px solid white; margin: 30px" />
+      <p>&copy; <em>Filtro</em>. All rights reserved.</p>
     </footer>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
